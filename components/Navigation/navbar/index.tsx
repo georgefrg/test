@@ -3,11 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
+import MobileNavigation from "./MobileNavigation";
 import Theme from "./Theme";
 
 const Navbar = () => {
   return (
-    <nav className="flex-between background-light900_dark200 fixed z-50 w-full gap-5 p-6 sm:px-12 dark:shadow-none">
+    <nav className="flex-between background-light900_dark200 fixed z-50 w-full gap-5 p-6 dark:shadow-none sm:px-12">
       <Link href="/" className="flex items-center gap-1">
         <Image
           src="/images/site-logo.svg"
@@ -24,8 +25,9 @@ const Navbar = () => {
       <p>Global Search</p>
 
       <div className="flex-between gap-5">
-        T
         <Theme />
+
+        <MobileNavigation />
       </div>
     </nav>
   );
