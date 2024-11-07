@@ -81,7 +81,7 @@ export const AskQuestionSchema = z.object({
     .max(100, { message: "Title cannot exceed 100 characters" }),
 
   content: z.string().min(1, { message: "Body is required" }),
-  tag: z
+  tags: z
     .array(
       z
         .string()
